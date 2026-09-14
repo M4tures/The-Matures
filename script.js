@@ -90,3 +90,23 @@ window.addEventListener("scroll", function(){
     }
 
 });
+const homeLink = document.querySelector('nav a[href="/"]');
+
+
+homeLink.addEventListener("click", function(event){
+
+    event.preventDefault();
+
+
+    window.scrollTo({
+
+        top:0,
+
+        behavior:"smooth"
+
+    });
+
+
+    history.replaceState(null, null, location.pathname);
+
+});
