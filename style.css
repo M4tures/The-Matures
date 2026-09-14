@@ -66,11 +66,12 @@ body{
 
     z-index:100;
 
-    nav.active{
+}
+
+
+nav.active{
 
     z-index:200;
-
-}
 
 }
 
@@ -149,7 +150,14 @@ nav a:hover{
 
     url("images/hero.jpg");
 
-    .hero::after{
+    background-size:cover;
+
+    background-position:center;
+
+}
+
+
+.hero::after{
 
     content:"";
 
@@ -166,12 +174,6 @@ nav a:hover{
 
 }
 
-
-    background-size:cover;
-
-    background-position:center;
-
-}
 
 
 .hero-title{
