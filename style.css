@@ -512,6 +512,130 @@ opacity:1;
 
 }
 
+/* ================= ARCHIVE ================= */
+
+
+.archive{
+
+    padding:220px 10% 120px;
+
+    background:#080808;
+
+}
+
+
+.archive-content{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:80px;
+
+}
+
+
+.archive-image{
+
+    position:relative;
+
+    width:500px;
+
+    height:520px;
+
+    overflow:hidden;
+
+}
+
+
+.archive-image img:first-child{
+
+    width:100%;
+
+    height:100%;
+
+    display:block;
+
+    object-fit:cover;
+
+    object-position:center 75%;
+
+    transform:translateY(10px);
+
+}
+
+
+.archive-detail{
+
+    position:absolute;
+
+    width:180px;
+
+    aspect-ratio:1 / 1;
+
+    left:10px;
+
+    top:20px;
+
+    object-fit:cover;
+
+    display:block;
+
+    border:5px solid #080808;
+
+    box-shadow:0 20px 40px rgba(0,0,0,.5);
+
+    z-index:2;
+
+}
+
+
+.archive-text{
+
+    width:35%;
+
+}
+
+
+.archive-text h2{
+
+    font-family:'Bodoni Moda', serif;
+
+    font-size:32px;
+
+    letter-spacing:5px;
+
+    margin-bottom:35px;
+
+}
+
+
+.archive-text p{
+
+    color:#aaa;
+
+    line-height:2;
+
+}
+
+
+.archive-text span{
+
+    display:block;
+
+    margin-top:40px;
+
+    color:#9a5a5a;
+
+    font-size:12px;
+
+    letter-spacing:5px;
+
+}
+
+
 
 /* ================= SIZE ================= */
 
@@ -564,7 +688,7 @@ th{
 
     background:var(--surface);
 
-    padding:100px 15%;
+    padding:5px 15% 100px;
 
     text-align:center;
 
@@ -577,9 +701,9 @@ th{
 
     font-family:'Bodoni Moda', serif;
 
-    font-size:35px;
+    font-size:42px;
 
-    letter-spacing:5px;
+    letter-spacing:7px;
 
     color:#9a5a5a;
 
@@ -606,6 +730,22 @@ th{
     color:#777;
 
     letter-spacing:5px;
+
+}
+
+.statement{
+
+    margin-top:70px;
+
+    font-family:'Bodoni Moda', serif;
+
+    font-size:22px;
+
+    letter-spacing:6px;
+
+    color:#9a5a5a;
+
+    text-transform:uppercase;
 
 }
 
