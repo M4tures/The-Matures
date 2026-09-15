@@ -333,7 +333,9 @@ button:hover{
 
 .card button{
 
-    width:100%;
+    width:220px;
+    display:block;
+    margin:20px auto 0;
 
 }
 
@@ -379,7 +381,7 @@ button:hover::before{
 
 .collection{
 
-    padding:25px 8% 200px;
+    padding:25px 8% 160px;
 
     text-align:center;
 
@@ -427,13 +429,13 @@ button:hover::before{
 
 .card{
 
-    width:340px;
+    width:420px;
 
     background:#0d0d0d;
 
     border:1px solid #222;
 
-    padding:25px;
+    padding:20px;
 
     text-align:center;
 
@@ -489,7 +491,7 @@ opacity:1;
 
 .product-image{
 
-    height:380px;
+    height:330px;
 
     display:flex;
 
@@ -576,6 +578,8 @@ opacity:1;
 
     letter-spacing:3px;
 
+    margin-top:18px;
+
 }
 
 
@@ -587,6 +591,10 @@ opacity:1;
 
     letter-spacing:1px;
 
+    white-space:nowrap;
+
+    margin:15px 0 10px;
+
 }
 
 .collection-name{
@@ -597,7 +605,7 @@ opacity:1;
 
     letter-spacing:3px;
 
-    margin-top:8px;
+    margin-top:8px 0;
 
 }
 
@@ -746,7 +754,7 @@ opacity:1;
 
     gap:80px;
 
-    transform:translateY(-25px);
+    transform:translateY(0);
 }
 
 
