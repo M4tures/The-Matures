@@ -23,34 +23,42 @@ const hamburger = document.querySelector(".hamburger");
 const menu = document.querySelector("#menu");
 
 
-hamburger.addEventListener("click", function(){
+if(hamburger && menu){
 
-    menu.classList.toggle("active");
+    hamburger.addEventListener("click", function(){
 
-    console.log(menu.classList);
+        menu.classList.toggle("active");
 
-});
+        console.log(menu.classList);
+
+    });
+
+}
 
 
 
 const menuLinks = document.querySelectorAll("#menu a");
 
 
-menuLinks.forEach(function(link){
+if(menu){
 
-    link.addEventListener("click", function(){
+    menuLinks.forEach(function(link){
 
-        menu.classList.remove("active");
+        link.addEventListener("click", function(){
+
+            menu.classList.remove("active");
+
+        });
 
     });
 
-});
+}
 
 
 
 window.addEventListener("resize", function(){
 
-    if(window.innerWidth > 700){
+    if(menu && window.innerWidth > 700){
 
         menu.classList.remove("active");
 
@@ -59,12 +67,16 @@ window.addEventListener("resize", function(){
 });
 document.addEventListener("click", function(event){
 
-    if(
-        !menu.contains(event.target) &&
-        !hamburger.contains(event.target)
-    ){
+    if(menu && hamburger){
 
-        menu.classList.remove("active");
+        if(
+            !menu.contains(event.target) &&
+            !hamburger.contains(event.target)
+        ){
+
+            menu.classList.remove("active");
+
+        }
 
     }
 
@@ -112,24 +124,156 @@ window.addEventListener("scroll", function(){
 const homeLink = document.querySelector('nav a[href="/"]');
 
 
-homeLink.addEventListener("click", function(event){
+if(homeLink){
 
-    event.preventDefault();
+    homeLink.addEventListener("click", function(event){
+
+        event.preventDefault();
 
 
-    window.scrollTo({
+        window.scrollTo({
 
-        top:0,
+            top:0,
 
-        behavior:"smooth"
+            behavior:"smooth"
+
+        });
+
+
+        history.replaceState(
+            null,
+            null,
+            window.location.pathname
+        );
+
+    });
+
+}
+
+// PRODUCT COLOR SWITCH
+
+const productImage = document.querySelector("#product-image");
+const productEdition = document.querySelector("#product-edition");
+
+const whiteBtn = document.querySelector("#white-btn");
+const blackBtn = document.querySelector("#black-btn");
+
+
+if(productImage){
+
+    whiteBtn.addEventListener("click", function(){
+
+        productImage.src = "images/white-tee.jpg";
+
+        productEdition.textContent = "WHITE EDITION";
+
+
+        whiteBtn.classList.add("active");
+        blackBtn.classList.remove("active");
 
     });
 
 
-    history.replaceState(
-        null,
-        null,
-        window.location.pathname
-    );
 
-});
+    blackBtn.addEventListener("click", function(){
+
+        productImage.src = "images/black-tee.jpg";
+
+        productEdition.textContent = "BLACK EDITION";
+
+
+        blackBtn.classList.add("active");
+        whiteBtn.classList.remove("active");
+
+    });
+
+}
+
+// PRODUCT SIZE SELECTOR
+
+const sizeButtons = document.querySelectorAll(".size-btn");
+
+
+if(sizeButtons.length > 0){
+
+    sizeButtons.forEach(function(button){
+
+        button.addEventListener("click", function(){
+
+            sizeButtons.forEach(function(btn){
+
+                btn.classList.remove("active");
+
+            });
+
+
+            button.classList.add("active");
+
+
+        });
+
+    });
+
+}
+
+// PRODUCT WHATSAPP ORDER
+
+const whatsappOrder = document.querySelector("#whatsapp-order");
+
+
+if(whatsappOrder){
+
+
+    whatsappOrder.addEventListener("click", function(event){
+
+
+        const activeColor = document.querySelector(".color-btn.active");
+
+        const activeSize = document.querySelector(".size-btn.active");
+
+
+
+        const color = activeColor 
+        ? activeColor.textContent.trim()
+        : "-";
+
+
+
+        const size = activeSize
+        ? activeSize.dataset.size
+        : "-";
+
+
+
+        const message = 
+`Halo THE_MATURES 👋
+
+Saya ingin melakukan pemesanan:
+
+Produk:
+THE MATURE YOUNG TEE
+
+Warna:
+${color} EDITION
+
+Ukuran:
+${size}
+
+Terima kasih.`;
+
+
+
+        const phone = "6282126323422";
+
+
+        whatsappOrder.href =
+        "https://wa.me/" + phone +
+        "?text=" +
+        encodeURIComponent(message);
+
+
+
+    });
+
+
+}
