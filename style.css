@@ -1534,3 +1534,224 @@ nav.active{
     letter-spacing:2px;
     font-size:18px;
 }
+
+/* SIZE GUIDE MODAL */
+
+.size-modal{
+    display:none;
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,0.75);
+    z-index:999;
+    align-items:center;
+    justify-content:center;
+}
+
+
+.size-modal-content{
+
+    background:#0d0d0d;
+    border:1px solid #333;
+
+    width:450px;
+    padding:40px;
+
+    position:relative;
+}
+
+
+.size-modal-content h2{
+
+    font-family:'Bodoni Moda', serif;
+    text-align:center;
+
+    letter-spacing:3px;
+
+    margin-bottom:30px;
+
+}
+
+
+#close-size{
+
+    position:absolute;
+
+    top:15px;
+    right:20px;
+
+    background:none;
+    border:none;
+
+    color:white;
+
+    font-size:24px;
+
+    cursor:pointer;
+
+}
+
+
+.size-modal-content table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+}
+
+
+.size-modal-content th,
+.size-modal-content td{
+
+    padding:15px;
+
+    border-bottom:1px solid #333;
+
+    text-align:center;
+
+}
+
+
+.size-modal-content th{
+
+    color:#8b3f3f;
+
+    letter-spacing:2px;
+
+}
+
+/* FINAL PRODUCT PAGE HEIGHT FIX */
+
+.product-gallery{
+    padding-bottom:0;
+}
+
+
+.product-size h3{
+    margin-bottom:6px;
+}
+
+
+.size-btn{
+    padding:10px 18px;
+}
+
+
+#order-btn{
+    margin-top:12px;
+    padding:12px 30px;
+}
+
+#close-size{
+
+    transition:none !important;
+    transform:none !important;
+
+    animation:none !important;
+
+    overflow:visible;
+
+    background:none;
+
+    font-size:20px;
+
+    opacity:.8;
+
+}
+
+
+#close-size::before{
+
+    display:none;
+
+}
+
+
+#close-size:hover{
+
+    transition:none !important;
+
+    transform:none !important;
+
+    background:none;
+
+    opacity:1;
+
+}
+
+/* SIZE GUIDE LINK */
+
+#size-guide-btn{
+
+    position:relative;
+
+    background:none !important;
+    border:none !important;
+
+    color:#aaa29c;
+
+    padding:8px 0;
+
+    margin-top:12px;
+
+    font-size:11px;
+
+    letter-spacing:4px;
+
+    line-height:1;
+
+    overflow:visible !important;
+
+    transform:none !important;
+
+}
+
+
+/* matikan efek tombol global */
+
+#size-guide-btn::before{
+
+    content:none !important;
+
+}
+
+
+/* underline animation */
+
+#size-guide-btn::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-1px;
+
+    width:0;
+
+    height:1px;
+
+    background:white;
+
+    transition:.3s ease;
+
+}
+
+
+#size-guide-btn:hover::after{
+
+    width:97%;
+
+}
+
+
+#size-guide-btn:hover{
+
+    background:none !important;
+
+    color:white;
+
+    transform:none !important;
+
+}

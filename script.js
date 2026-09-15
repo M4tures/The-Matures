@@ -281,3 +281,46 @@ if(colorButtons.length > 0 && productImage && productEdition){
     });
 
 }
+
+// SIZE GUIDE MODAL
+
+const sizeBtn = document.getElementById("size-guide-btn");
+const sizeModal = document.getElementById("size-modal");
+const closeSize = document.getElementById("close-size");
+
+
+if(sizeBtn){
+
+    sizeBtn.addEventListener("click", function(){
+
+        sizeModal.style.display="flex";
+
+    });
+
+}
+
+
+if(closeSize){
+
+    closeSize.addEventListener("click", function(){
+
+        sizeModal.style.display="none";
+
+    });
+
+}
+
+
+if(sizeModal){
+
+    sizeModal.addEventListener("click", function(e){
+
+        if(e.target === sizeModal){
+
+            sizeModal.style.display="none";
+
+        }
+
+    });
+
+}
