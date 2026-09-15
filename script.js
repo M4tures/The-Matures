@@ -1,5 +1,23 @@
 console.log('The Matures loaded');
 
+if(window.location.hash){
+
+    history.replaceState(
+        null,
+        null,
+        window.location.pathname
+    );
+
+}
+
+if(history.scrollRestoration){
+
+    history.scrollRestoration = "manual";
+
+}
+
+
+window.scrollTo(0,0);
 
 const hamburger = document.querySelector(".hamburger");
 const menu = document.querySelector("#menu");
@@ -90,6 +108,7 @@ window.addEventListener("scroll", function(){
     }
 
 });
+
 const homeLink = document.querySelector('nav a[href="/"]');
 
 
@@ -107,6 +126,10 @@ homeLink.addEventListener("click", function(event){
     });
 
 
-    history.replaceState(null, null, location.pathname);
+    history.replaceState(
+        null,
+        null,
+        window.location.pathname
+    );
 
 });
