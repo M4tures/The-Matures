@@ -1292,7 +1292,11 @@ nav.active{
 
     display:flex;
 
-    justify-content:center;
+    flex-direction:column;
+
+    align-items:center;
+
+    padding-top:40px;
 
 }
 
@@ -1302,11 +1306,13 @@ nav.active{
 
     width:100%;
 
-    max-width:520px;
+    max-width:450px;
+
+    max-height:450px;
 
     object-fit:contain;
 
-    transition:.8s ease;
+    transition:none;
 
 }
 
@@ -1453,47 +1459,40 @@ nav.active{
 
 }
 
-
-
 .color-options{
-
     display:flex;
-
-    gap:15px;
-
+    gap:12px;
 }
-
-
 
 .color-btn{
+    width:auto !important;
+    min-width:100px;
+    margin-top:0 !important;
 
-    background:none;
+    padding:13px 22px;
 
+    background:transparent;
     border:1px solid #333;
 
-    color:#aaa;
-
-    padding:12px 25px;
+    color:#888;
 
     font-size:11px;
-
     letter-spacing:3px;
 
-    cursor:pointer;
-
-    transition:.3s;
-
+    transition:.3s ease;
 }
 
-
-
-.color-btn:hover,
-.color-btn.active{
-
+.color-btn:hover{
+    background:transparent;
     border-color:#9a5a5a;
-
     color:white;
+    transform:none;
+}
 
+.color-btn.active{
+    background:#5a1f1f;
+    border-color:#5a1f1f;
+    color:white;
 }
 
 /* PRODUCT SIZE OPTIONS */

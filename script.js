@@ -150,44 +150,7 @@ if(homeLink){
 
 }
 
-// PRODUCT COLOR SWITCH
 
-const productImage = document.querySelector("#product-image");
-const productEdition = document.querySelector("#product-edition");
-
-const whiteBtn = document.querySelector("#white-btn");
-const blackBtn = document.querySelector("#black-btn");
-
-
-if(productImage){
-
-    whiteBtn.addEventListener("click", function(){
-
-        productImage.src = "images/white-tee.jpg";
-
-        productEdition.textContent = "WHITE EDITION";
-
-
-        whiteBtn.classList.add("active");
-        blackBtn.classList.remove("active");
-
-    });
-
-
-
-    blackBtn.addEventListener("click", function(){
-
-        productImage.src = "images/black-tee.jpg";
-
-        productEdition.textContent = "BLACK EDITION";
-
-
-        blackBtn.classList.add("active");
-        whiteBtn.classList.remove("active");
-
-    });
-
-}
 
 // PRODUCT SIZE SELECTOR
 
@@ -275,5 +238,46 @@ Terima kasih.`;
 
     });
 
+
+}
+
+// PRODUCT COLOR SWITCH
+const colorButtons = document.querySelectorAll(".color-btn");
+const productImage = document.querySelector("#product-image");
+const productEdition = document.querySelector("#product-edition");
+
+if(colorButtons.length > 0 && productImage && productEdition){
+
+    colorButtons.forEach(function(button){
+
+        button.addEventListener("click", function(){
+
+            colorButtons.forEach(function(btn){
+                btn.classList.remove("active");
+            });
+
+            button.classList.add("active");
+
+            const color = button.dataset.color;
+
+            if(color === "BLACK"){
+
+                productImage.src = "images/black-tee.jpg";
+                productImage.alt = "THE MATURE YOUNG TEE Black Edition";
+
+                productEdition.textContent = "BLACK EDITION";
+
+            }else{
+
+                productImage.src = "images/white-tee.jpg";
+                productImage.alt = "THE MATURE YOUNG TEE White Edition";
+
+                productEdition.textContent = "WHITE EDITION";
+
+            }
+
+        });
+
+    });
 
 }
