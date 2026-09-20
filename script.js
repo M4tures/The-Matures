@@ -72,6 +72,37 @@ if(hamburger && menu){
 
 }
 
+// ================= MOBILE KEYBOARD FIRST TAB =================
+
+let firstMobileTabHandled = false;
+
+document.addEventListener(
+    "keydown",
+    function(event){
+
+        if(
+            event.key === "Tab" &&
+            !event.shiftKey &&
+            window.innerWidth <= 700 &&
+            hamburger &&
+            menu &&
+            !menu.classList.contains("active") &&
+            !firstMobileTabHandled
+        ){
+
+            event.preventDefault();
+
+            firstMobileTabHandled = true;
+
+            hamburger.focus({
+                preventScroll:true
+            });
+
+        }
+
+    },
+    true
+);
 
 // MENU LINK CLICK
 
