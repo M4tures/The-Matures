@@ -207,7 +207,7 @@ if("IntersectionObserver" in window){
 // ACTIVE NAVBAR SECTION
 
 const sections = document.querySelectorAll("section[id]");
-
+const isHomePage = document.getElementById("home") !== null;
 
 const sectionRoutes = {
     home: "/",
@@ -257,6 +257,10 @@ function getCurrentSection(){
 
 function updateActiveNav(){
 
+    if(!isHomePage){
+        return;
+    }
+
     const current = getCurrentSection();
 
 
@@ -286,7 +290,7 @@ let navigationTimer = null;
 
 function updateCleanUrl(){
 
-    if(isProgrammaticNavigation){
+    if(!isHomePage || isProgrammaticNavigation){
         return;
     }
 
@@ -381,7 +385,9 @@ function openSectionFromUrl(){
 }
 
 
-openSectionFromUrl();
+if(isHomePage){
+    openSectionFromUrl();
+}
 
 
 
@@ -641,6 +647,10 @@ document.querySelectorAll("#menu a").forEach(function(link){
 
     link.addEventListener("click", function(event){
 
+        if(!isHomePage){
+            return;
+        }
+
         const href = link.getAttribute("href");
 
 
@@ -754,7 +764,9 @@ document.querySelectorAll(
 
 window.addEventListener("popstate", function(){
 
+    if(isHomePage){
     openSectionFromUrl();
+}
 
 });
 
