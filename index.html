@@ -3,11 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <title>THE_MATURES | Official Streetwear</title>
+    <link rel="canonical" href="https://the-matures.vercel.app/">
     <link rel="icon" type="image/png" sizes="512x512" href="./favicon.png?v=2">
     <meta name="description" content="THE_MATURES is a streetwear brand creating timeless pieces with modern identity. Explore boxy tee, long sleeve, and everyday essentials.">
     <meta name="keywords" content="THE_MATURES, streetwear, boxy tee, oversized tee, fashion Indonesia">
     <meta name="author" content="THE_MATURES">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preload" as="image" href="images/hero.jpg">
 
     <!-- SOCIAL PREVIEW -->
 
@@ -30,24 +32,33 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500;6..96,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+<div class="page-transition"></div>
+
     <header class="header">
         <div class="logo">THE_MATURES</div>
 
-        <div class="hamburger">☰</div>
+        <div
+    class="hamburger"
+    role="button"
+    tabindex="0"
+    aria-label="Open menu"
+    aria-controls="menu"
+    aria-expanded="false">
+    ☰
+</div>
 
         <nav id="menu">
     <a href="/">HOME</a>
-    <a href="#collection">COLLECTION</a>
-    <a href="#archive">ARCHIVE</a>
-    <a href="#about">ABOUT</a>
-    <a href="https://instagram.com/matures_co" target="_blank">INSTAGRAM</a>
+    <a href="/Collection">COLLECTION</a>
+    <a href="/Archive">ARCHIVE</a>
+    <a href="/About">ABOUT</a>
+    <a href="https://instagram.com/matures_co" target="_blank" rel="noopener noreferrer">INSTAGRAM</a>
 </nav>
     </header>
 
@@ -55,9 +66,9 @@
         <h1 class="hero-title">THE_MATURES</h1>
         <p class="hero-subtitle">Young Mind. Mature Soul.</p>
 
-        <a href="#collection" class="hero-link">
-            <button class="hero-btn">Explore Collection</button>
-        </a>
+        <a href="#collection" class="hero-link hero-btn">
+    Explore Collection
+</a>
     </section>
 
     <section id="collection" class="collection">
@@ -72,6 +83,7 @@
 <img 
 src="images/white-tee.jpg"
 loading="lazy"
+decoding="async"
 alt="THE MATURE YOUNG TEE">
 </div>
 
@@ -101,10 +113,8 @@ Rp149.000
 </h4>
 
 
-<a href="product.html">
-<button>
-VIEW PRODUCT
-</button>
+<a href="/the-mature-young-tee" class="card-button">
+    VIEW PRODUCT
 </a>
 
 
@@ -120,13 +130,19 @@ VIEW PRODUCT
 
         <div class="archive-image reveal">
 
-            <img src="images/archive-main.jpg" 
-            alt="THE_MATURES Archive">
+            <img
+src="images/archive-main.jpg"
+loading="lazy"
+decoding="async"
+alt="THE_MATURES Archive">
 
 
-            <img class="archive-detail"
-            src="images/archive-detail.jpg"
-            alt="THE_MATURES Detail">
+<img
+class="archive-detail"
+src="images/archive-detail.jpg"
+loading="lazy"
+decoding="async"
+alt="THE_MATURES Detail">
 
         </div>
 
@@ -154,38 +170,6 @@ VIEW PRODUCT
 </section>
     
     
-
-<section id="size-guide" class="size-guide">
-        <h2>SIZE GUIDE</h2>
-
-        <table>
-            <tr>
-                <th>SIZE</th>
-                <th>WIDTH</th>
-                <th>LENGTH</th>
-            </tr>
-            <tr>
-                <td>M</td>
-                <td>58 CM</td>
-                <td>70 CM</td>
-            </tr>
-            <tr>
-                <td>L</td>
-                <td>60 CM</td>
-                <td>72 CM</td>
-            </tr>
-            <tr>
-                <td>XL</td>
-                <td>62 CM</td>
-                <td>75 CM</td>
-            </tr>
-            <tr>
-                <td>XXL</td>
-                <td>64 CM</td>
-                <td>78 CM</td>
-            </tr>
-        </table>
-    </section>
 
     <section id="about" class="about reveal">
 
@@ -220,7 +204,7 @@ between youth and maturity.
     <footer class="footer reveal">
         <h2>THE_MATURES</h2>
         <p>Young Mind. Mature Soul.</p>
-        <a href="https://www.instagram.com/matures_co/" target="_blank">Instagram</a>
+        <a href="https://www.instagram.com/matures_co/" target="_blank" rel="noopener noreferrer">Instagram</a>
         <span>© 2025 THE_MATURES</span>
     </footer>
 

@@ -1,0 +1,20 @@
+{
+  "rewrites": [
+    {
+      "source": "/Collection",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/Archive",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/About",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/the-mature-young-tee",
+      "destination": "/product.html"
+    }
+  ]
+}

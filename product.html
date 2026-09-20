@@ -7,7 +7,34 @@
 
 <title>THE MATURE YOUNG TEE | THE_MATURES</title>
 
+<link rel="canonical" href="https://the-matures.vercel.app/product.html">
+
+<meta name="description" content="THE MATURE YOUNG TEE by THE_MATURES. Oversized boxy fit, heavy cotton, and premium streetwear in White and Black Edition.">
+
+<!-- SOCIAL PREVIEW -->
+
+<meta property="og:title" content="THE MATURE YOUNG TEE | THE_MATURES">
+
+<meta property="og:description" content="Oversized boxy fit, heavy cotton, and premium streetwear. Available in White and Black Edition.">
+
+<meta property="og:image" content="https://the-matures.vercel.app/images/white-tee.jpg">
+
+<meta property="og:image:type" content="image/jpeg">
+
+<meta property="og:url" content="https://the-matures.vercel.app/product.html">
+
+<meta property="og:type" content="product">
+
+<link rel="icon" type="image/png" sizes="512x512" href="./favicon.png?v=2">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500;6..96,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="style.css">
 
@@ -16,8 +43,10 @@
 
 <body>
 
+<div class="page-transition"></div>
 
-<header class="header">
+
+<header class="header product-header">
 
     <div class="logo">
         THE_MATURES
@@ -26,23 +55,23 @@
 
     <nav id="menu">
 
-        <a href="index.html">
-            HOME
-        </a>
+        <a href="./index.html">
+    HOME
+</a>
 
-        <a href="index.html#collection">
-            COLLECTION
-        </a>
+<a href="./index.html#collection">
+    COLLECTION
+</a>
 
-        <a href="index.html#archive">
-            ARCHIVE
-        </a>
+<a href="./index.html#archive">
+    ARCHIVE
+</a>
 
-        <a href="index.html#about">
-            ABOUT
-        </a>
+<a href="./index.html#about">
+    ABOUT
+</a>
 
-        <a href="https://instagram.com/matures_co" target="_blank">
+        <a href="https://instagram.com/matures_co" target="_blank" rel="noopener noreferrer">
 INSTAGRAM
 </a>
 
@@ -55,6 +84,12 @@ INSTAGRAM
 <section class="product-page">
 
 
+<a href="./index.html#collection" class="back-collection">
+    <span class="back-arrow"></span>
+    RETURN TO COLLECTION
+</a>
+
+
 <div class="product-container">
 
 
@@ -64,10 +99,12 @@ INSTAGRAM
 <img 
 id="product-image"
 src="images/white-tee.jpg"
+fetchpriority="high"
+decoding="async"
 alt="THE MATURE YOUNG TEE White Edition">
 
 
-<div class="product-size">
+<div class="product-size desktop-size">
 
     <h3>
         AVAILABLE SIZE
@@ -76,41 +113,39 @@ alt="THE MATURE YOUNG TEE White Edition">
 
     <div class="size-options">
 
-        <button class="size-btn" data-size="M">
-            M
-        </button>
+        <button type="button" class="size-btn" data-size="M">
+    M
+</button>
 
-        <button class="size-btn" data-size="L">
-            L
-        </button>
+<button type="button" class="size-btn" data-size="L">
+    L
+</button>
 
-        <button class="size-btn" data-size="XL">
-            XL
-        </button>
+<button type="button" class="size-btn" data-size="XL">
+    XL
+</button>
 
-        <button class="size-btn" data-size="XXL">
-            XXL
-        </button>
+<button type="button" class="size-btn" data-size="XXL">
+    XXL
+</button>
 
     </div>
 
-<button id="size-guide-btn">
+
+    <button type="button" class="size-guide-btn">
     SIZE GUIDE
 </button>
 
 </div>
 
 
-
 <a 
 id="whatsapp-order"
+class="whatsapp-order"
 href="https://wa.me/6282126323422"
-target="_blank">
-
-    <button id="order-btn">
-        ORDER NOW
-    </button>
-
+target="_blank"
+rel="noopener noreferrer">
+    ORDER NOW
 </a>
 
 
@@ -145,6 +180,8 @@ target="_blank">
             THE_MATURES COLLECTION 01
         </p>
 
+
+
 <div class="product-color">
 
     <h3>COLOR</h3>
@@ -167,8 +204,61 @@ target="_blank">
 
     </div>
 
+<div class="mobile-size">
+
+    <div class="product-size">
+
+        <h3>
+            AVAILABLE SIZE
+        </h3>
+
+
+        <div class="size-options">
+
+            <button type="button" class="size-btn" data-size="M">
+    M
+</button>
+
+<button type="button" class="size-btn" data-size="L">
+    L
+</button>
+
+<button type="button" class="size-btn" data-size="XL">
+    XL
+</button>
+
+<button type="button" class="size-btn" data-size="XXL">
+    XXL
+</button>
+
+        </div>
+
+
+        <button type="button" class="size-guide-btn">
+    SIZE GUIDE
+</button>
+
+    </div>
+
 </div>
-        <div class="product-details">
+
+    </div>
+
+
+    <div class="mobile-order">
+
+    <a 
+    class="whatsapp-order mobile-order-btn"
+    href="https://wa.me/6282126323422"
+    target="_blank"
+    rel="noopener noreferrer">
+        ORDER NOW
+    </a>
+
+</div>
+
+
+    <div class="product-details">
 
             <h3>
                 DETAILS
@@ -195,27 +285,35 @@ target="_blank">
 
 </section>
 
-<div id="size-modal" class="size-modal">
+<div
+id="size-modal"
+class="size-modal"
+role="dialog"
+aria-modal="true"
+aria-labelledby="size-guide-title">
 
     <div class="size-modal-content">
 
-        <button id="close-size">
-            ×
-        </button>
+        <button
+id="close-size"
+type="button"
+aria-label="Close size guide">
+    ×
+</button>
 
 
-        <h2>
-            SIZE GUIDE
-        </h2>
+        <h2 id="size-guide-title">
+    SIZE GUIDE
+</h2>
 
 
         <table>
 
             <tr>
-                <th>SIZE</th>
-                <th>WIDTH</th>
-                <th>LENGTH</th>
-            </tr>
+    <th scope="col">SIZE</th>
+    <th scope="col">WIDTH</th>
+    <th scope="col">LENGTH</th>
+</tr>
 
 
             <tr>
